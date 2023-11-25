@@ -22,7 +22,7 @@ Decoder(TransformerDecoder) output is input in a linear projection layer.
 
 CTCLoss is used by loss calculation. 
 
-loss = nn.CTCLoss(blank=0, reduction='mean',zero_infinity=Fals)( outputs.transpose(0,1), labels, output_lengths, labels_lens )
+loss = nn.CTCLoss(blank=0, reduction='mean',zero_infinity=False)( outputs.transpose(0,1), labels, output_lengths, labels_lens )
 
 where outputs and output_lens are calculated with machine learning model. Labels and label_lens are teacher data.
 
