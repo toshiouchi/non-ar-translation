@@ -30,3 +30,7 @@ where outputs and output_lens are calculated with machine learning model. Labels
 CTCLoss outputs inf when output_lengths is not greater than labels_lens to some extent. So, if outputs is shorter than 1.5 times of labels with time axis, outputs is padded with pad_id to be 1.5 times the size of labels with time axis. And output_lens is also corrected.
 
 CTCLoss is used, so ctc_simple_decode(int_vector, token_list) function in source code is used in order to decode outputs of model.inference.
+
+Explanation of detail machine learning in Japanese
+https://qiita.com/toshiouchi/items/f6932bb5c3fe1c04f489
+
