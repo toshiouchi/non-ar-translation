@@ -2,6 +2,7 @@
 non-autoregressive machine translation
 
 Machine learning result
+
 Japanese English machine translation was learaned with 200,000 data. For 5,000 test data, WER was 37%.
 
 Feature of program
@@ -15,6 +16,7 @@ Decoder output is input in a linear projection layer.
 CTCLoss is used by loss calculation. 
 
 loss = nn.CTCLoss(blank=0, reduction='mean',zero_infinity=Fals)( outputs.transpose(0,1), labels, output_lengths, labels_lens )
+
 where outputs and output_lens are calculated with machine learning model. Labels and label_lens are teacher data.
 
 CTCLoss outputs inf when output_lengths is not greater than labels_lens to some extent. So, if outputs is shorter than 1.5 times of labels with time axis, outputs is padded with pad_id to be 1.5 times the size of labels with time axis. And output_lens is also corrected.
