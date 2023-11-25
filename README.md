@@ -15,7 +15,7 @@ Position wise feed forward network in both TransformerEncoder and TransformerDec
 
 Input of encoder is Japanese indexes, it is embed, positional embedding is done. Then, the sum of embed values and positional embedding values are input in TransformerEncoder with self attention module.
 
-Especially encoder output is doubled with time axis with upsampling module. And, also input_lens as input lengths of encoder is doubled and becomes the input of CTCLoss as output_lens.
+Especially encoder output stretch to double with time axis with upsampling module. And, also input_lens as input lengths of encoder is doubled and becomes the input of CTCLoss as output_lens.
 
 TransformerDecoder is used as cross attention module. Source input is encoder ouput and target input is upsampled encoder output with positional embedding. 
 
