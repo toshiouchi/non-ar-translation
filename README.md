@@ -3,7 +3,7 @@ non-autoregressive machine translation
 
 Machine learning result
 
-Japanese English machine translation was learaned with 200,000 data. For 5,000 test data, WER was 37%.
+Japanese English machine translation was learned with 200,000 data. For 5,000 test data, WER was 37%.
 
 Feature of program
 
