@@ -9,7 +9,7 @@ Feature of program
 
 Transformer with convolutional position wise feed forward network is used. 
 
-Encoder has 12 layers, 8 heads, hidden dim 1024. Also decoder has 12 layers, 8 heads, hidden dim 1024.
+TransformerEncoder has 12 layers, 8 heads, hidden dim 1024. Also TransformerDecoder has 12 layers, 8 heads, hidden dim 1024.
 
 Position wise feed forward network in both TransformerEncoder and TransformerDecoder has two convolutional layers which have filters (1024, 4096) , (4096, 1024), kernel sizes are 5 and 1, strides are both 1, layer norm and dropout with rate 0.1.
 
