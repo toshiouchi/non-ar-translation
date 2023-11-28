@@ -474,10 +474,11 @@ if __name__ == "__main__":
                 # [発話数 x 全データの最大ラベル長]
                 # これを[発話数 x バッチ内の最大ラベル長]
                 # に切る。(decoder部の冗長な処理を少なくするため。)
-                label_len_max = torch.max( label_lens )
+                #label_len_max = torch.max( label_lens )
                 #if features.size(1) > 2 * torch.max(label_lens):
                 #    label_len_max = labels.size(1)
                 #labels = labels[:,:labels_len_max]
+                features = features[:,:torch.max(feat_lens)]
                 labels = labels[:,:torch.max(label_lens)]
                 #dec_input = labels[:,:-1].to(device)
                 #dec_target = labels[:,1:].to(device)
@@ -523,7 +524,7 @@ if __name__ == "__main__":
                     #if outputs_lens[n] <= label_lens[n]:
                         #outputs_lens[n] = label_lens[n] + 1
                         outputs_lens[n] = int( label_lens[n] * 1.5 )
-                        outputs_lens[n] = label_lens[n] * 2
+                        #outputs_lens[n] = label_lens[n] * 2
                 out_lens = outputs_lens
                 #print( "out_lens:{}".format( out_lens ) )
                 #for n in outputs:
