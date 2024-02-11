@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
 
-#
-# RNN Attention Encoder-Decoderモデルを学習します．
-#
-#MultiheadAttention の layer_norm と dropout 使わないようにに戻した。
-
 # Pytorchを用いた処理に必要なモジュールをインポート
 import torch
 import torch.nn as nn
