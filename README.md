@@ -34,3 +34,6 @@ CTCLoss is used, so ctc_simple_decode(int_vector, token_list) function in source
 Explanation of detail machine learning in Japanese
 https://qiita.com/toshiouchi/items/f6932bb5c3fe1c04f489
 
+Postscript
+
+The problem of CTCloss becoming inf was resolved by setting upsampling_rate to 3.
