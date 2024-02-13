@@ -7,11 +7,11 @@ Japanese English machine translation was learned with 200,000 data. For 5,000 te
 
 Feature of program
 
-Transformer with convolutional position wise feed forward network is used. 
+Transformer with two convolution layers was used inspite of position wise feed forward network. 
 
 TransformerEncoder has 12 layers, 8 heads, hidden dim 1024. Also TransformerDecoder has 12 layers, 8 heads, hidden dim 1024.
 
-Position wise feed forward network in both TransformerEncoder and TransformerDecoder has two convolutional layers which have filters (1024, 4096) , (4096, 1024), kernel sizes are 5 and 1, strides are both 1, layer norm and dropout with rate 0.1.
+Two convolution layers in both TransformerEncoder and TransformerDecoder has channels (1024, 4096) , (4096, 1024), kernel sizes are 5 and 1, strides are both 1, layer norm and dropout with rate 0.1.
 
 Input of encoder is Japanese indexes, it is embed, positional embedding is done. Then, the sum of embed values and positional embedding values are input in TransformerEncoder with self attention module.
 
