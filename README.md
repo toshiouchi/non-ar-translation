@@ -5,6 +5,8 @@ Machine learning result
 
 Japanese English machine translation was learned with 200,000 data. For 5,000 test data, WER was 37%.
 
+Unit of token is word.
+
 Feature of program
 
 Transformer with two convolution layers was used inspite of position wise feed forward network. 
